@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Vila1.css'; 
 import foto3 from "../images/foto3.jpg";
 
 
 
 const LuxurySeasideVilla = () => {
+    const [imageUrl, setImageUrl] = useState('');
+
+  useEffect(() => {
+    
+    fetch('http://localhost:5000/get-image-url')
+      .then((response) => response.json())
+      .then((data) => {
+        setImageUrl(data.imageUrl); 
+      });
+  }, []);
   return (
     <div className="luxury-seaside-villa">
       <header className="header">
@@ -42,21 +52,33 @@ const LuxurySeasideVilla = () => {
             </div>
           </div>
           <div className="image-container">
-            <img src="villa2.jpg" alt="Infinity Pool" />
+          <img
+          src="http://localhost:5000/images/slide1.jpg" 
+          alt="top-image"
+          className="top-image"
+        />
             <div className="image-details">
               <h3>Infinity Pool</h3>
               <p>Enjoy endless relaxation with an ocean view in our infinity pool.</p>
             </div>
           </div>
           <div className="image-container">
-            <img src="villa3.jpg" alt="Living Room" />
+          <img
+          src="http://localhost:5000/images/slide3.jpg" 
+          alt="top-image"
+          className="top-image"
+        />
             <div className="image-details">
               <h3>Living Room</h3>
               <p>Modern and cozy, perfect for entertaining guests or unwinding.</p>
             </div>
           </div>
           <div className="image-container">
-          <img src="villa3.jpg" alt="Living Room" />
+          <img
+          src="http://localhost:5000/images/slide2.jpg" 
+          alt="top-image"
+          className="top-image"
+        />
             <div className="image-details">
               <h3>Bedroom with Ocean View</h3>
               <p>Sleep in comfort while gazing out at the stunning ocean horizon.</p>

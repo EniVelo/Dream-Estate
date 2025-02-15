@@ -735,7 +735,29 @@ h2 {
   
   
   
-  
+  /* Stilizimi i linkut  */
+.luxury-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d4af37; 
+  text-decoration: none;
+  position: relative;
+  padding: 5px 15px;
+  border: 2px solid #d4af37; 
+  border-radius: 30px; 
+  transition: all 0.3s ease; /* Animacion per kalimin mbi link */
+}
+
+.luxury-link:hover {
+  color: #1d2b3a; 
+  background-color: #d4af37; 
+  border-color: #1d2b3a; 
+}
+
+.luxury-link:active {
+  transform: scale(0.98); 
+}
+
   
   
   

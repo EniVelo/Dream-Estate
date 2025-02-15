@@ -15,6 +15,7 @@ import "./Home.css";
 import "./Navbar.js";
 import { Link } from 'react-router-dom';
 
+
     
 const Home = () => {
   // Perdorimi i useState per te ruajtur te dhenat
@@ -35,8 +36,30 @@ const Home = () => {
     getData();
   }, []); // Perseritet nje here kur komponenti ngarkohet
 
+  
 
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchType, setSearchType] = useState('rent');
+  const [budget, setBudget] = useState('');
 
+  // Example properties array
+  const properties = [
+  ];
+
+  const handleSearch = () => {
+    // Filter properties based on search term, type, and budget
+    const filteredProperties = properties.filter(property => {
+      const matchesSearchTerm = property.title.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesType = property.type.toLowerCase() === searchType.toLowerCase();
+      const matchesBudget = budget ? property.price <= budget : true;
+
+      return matchesSearchTerm && matchesType && matchesBudget;
+    });
+
+    // Console log to check filtered results
+    console.log('Filtered Properties:', filteredProperties);
+    return filteredProperties;
+  };
 
   
       return (
@@ -74,13 +97,19 @@ const Home = () => {
   <p>Search for properties based on location, budget, style, and the type of room you desire.</p>
 
   <div className="search-container">
-    <input
+  <form onSubmit={handleSearch}>
+      <input
       type="text"
       placeholder="Search Properties..."
       className="search-bar"
+      value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
     />
 
-    <select className="search-type">
+    <select 
+    className="search-type"
+    value={searchType}
+    onChange={(e) => setSearchType(e.target.value)} >
       <option value="rent">Room for Rent </option>
       <option value="buy">Room for Sale</option>
     </select>
@@ -89,9 +118,12 @@ const Home = () => {
       type="number"
       placeholder="Budget (€)"
       className="search-budget"
+      value={budget}
+          onChange={(e) => setBudget(e.target.value)}
     />
     
-    <button className="search-btn">Search</button>
+    <button className="search-btn" onClick={handleSearch}>Search</button>
+    </form>
   </div>
 </section>
 
@@ -189,8 +221,12 @@ const Home = () => {
     <section id="luxury-villas" className="section new-homes">
       <h2 className="section-title">Luxury Villas</h2>
       <div className="property-list">
-        <div className="property-card">
-        <Link to="/luxury-seaside-villa">Have a look...</Link>
+      
+        <div className="property-card" >
+        <Link to="/luxury-seaside-villa" className="luxury-link">
+  Have a look...
+</Link>
+
           <img
             src={foto3} 
             alt="Luxury Villa"
@@ -204,8 +240,14 @@ const Home = () => {
             <div className="property-rating">★★★★★</div>
           </div>
         </div>
-        
+         
+
         <div className="property-card">
+        <Link to="/vila2" className="luxury-link">
+  Have a look ...
+</Link>
+
+
           <img
             src={foto4} 
             alt="Mountain View Villa"
@@ -220,6 +262,9 @@ const Home = () => {
           </div>
         </div>
         <div className="property-card">
+        <Link to="/vila3" className="luxury-link">
+  Have a look ...
+</Link>
           <img
             src={foto8} 
             alt="Private Pool Villa"
@@ -408,6 +453,11 @@ Plus, you’ll avoid realtor fees and closing costs, saving you thousands. For a
     </section>
     
     </>
+    
+
+
+
+
     
     
    </div>

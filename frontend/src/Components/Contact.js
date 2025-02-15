@@ -56,8 +56,7 @@ const Contact = () => {
 
       <div className="contact-form">
         <h2 className="form-title">Get in Touch</h2>
-        <form onSubmit={handleSubmit} encType="multipart/form-data"></form>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name"> Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" value={formData.name} 

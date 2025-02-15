@@ -10,7 +10,9 @@ import Footer from "./Components/Footer";
 import Read from "./Components/CRUD/Read";
 import ReadOne from "./Components/CRUD/ReadOne";
 import Update from "./Components/CRUD/Update";
-import LuxurySeasideVilla from './Components/LuxurySeasideVilla'; // Përshtatni rrugën sipas vendndodhjes së fajllit
+import LuxurySeasideVilla from './Components/LuxurySeasideVilla'; 
+import Vila2 from './Components/Vila2'; 
+import Vila3 from './Components/Vila3'; 
 
 
 
@@ -41,6 +43,8 @@ getData()
       <Route path="/Update/:id" element={<Update />} />
    
       <Route path="/luxury-seaside-villa" element={<LuxurySeasideVilla />} />
+      <Route path="/vila2" element={<Vila2 />} />
+      <Route path="/vila3" element={<Vila3 />} />
     </Routes>
    
    
