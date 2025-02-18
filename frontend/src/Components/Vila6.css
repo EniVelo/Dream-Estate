@@ -1,0 +1,169 @@
+.modern-loft-apartment {
+    font-family: 'Arial', sans-serif;
+    background-color: #eaeaea;
+    color: #333;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    background-color: #222222;
+    color: white;
+    padding: 80px 0;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    font-size: 3.8rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    font-style: italic;
+    color: #b3b3b3;
+}
+
+.apartment-details {
+    margin-top: 60px;
+}
+
+.apartment-details h2 {
+    font-size: 2.8rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.apartment-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.apartment-details li {
+    font-size: 1.4rem;
+    margin: 15px 0;
+    padding-left: 25px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.apartment-details li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #d4af37;
+    font-size: 1.6rem;
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.6rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjusted for 2 columns */
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.image-details {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 75%;
+}
+
+.image-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.image-details p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Amenities */
+.modern-amenities {
+    margin-top: 80px;
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modern-amenities h2 {
+    font-size: 2.8rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.amenities-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.amenity {
+    background-color: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    width: 28%;
+    text-align: center;
+}
+
+.amenity h3 {
+    font-size: 1.9rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.amenity p {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+}

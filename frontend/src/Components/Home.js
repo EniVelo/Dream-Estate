@@ -24,7 +24,7 @@ const Home = () => {
   // Funksioni per te marre te dhena nga backend
   const getData = async () => {
     try {
-      const response = await Axios.get("http://localhost:5000/getData"); // Beni kerkesen
+      const response = await Axios.get("http://localhost:5000/getData"); 
       setData(response.data); // Ruani te dhenat ne gjendje
     } catch (error) {
       console.error("Error fetching data:", error); 
@@ -226,7 +226,7 @@ const Home = () => {
         <Link to="/luxury-seaside-villa" className="luxury-link">
   Have a look...
 </Link>
-
+<br></br>
           <img
             src={foto3} 
             alt="Luxury Villa"
@@ -246,7 +246,7 @@ const Home = () => {
         <Link to="/vila2" className="luxury-link">
   Have a look ...
 </Link>
-
+<br></br>
 
           <img
             src={foto4} 
@@ -265,6 +265,7 @@ const Home = () => {
         <Link to="/vila3" className="luxury-link">
   Have a look ...
 </Link>
+<br></br>
           <img
             src={foto8} 
             alt="Private Pool Villa"
@@ -285,6 +286,10 @@ const Home = () => {
       <h2 className="section-title">Premium Apartments</h2>
       <div className="property-list">
         <div className="property-card">
+        <Link to="/vila4" className="luxury-link">
+  Have a look ...
+</Link>
+<br></br>
           <img
             src={foto7} 
             alt="Penthouse Apartment"
@@ -299,6 +304,10 @@ const Home = () => {
           </div>
         </div>
         <div className="property-card">
+        <Link to="/vila5" className="luxury-link">
+  Have a look ...
+</Link>
+<br></br>
           <img
             src={foto2} 
             alt="Luxury City Apartment"
@@ -313,6 +322,10 @@ const Home = () => {
           </div>
         </div>
         <div className="property-card">
+        <Link to="/vila6" className="luxury-link">
+  Have a look ...
+</Link>
+<br></br>
           <img
             src={foto10} 
             alt="Modern Loft Apartment"
@@ -333,6 +346,10 @@ const Home = () => {
       <h2 className="section-title">Exclusive Penthouse</h2>
       <div className="property-list">
         <div className="property-card">
+        <Link to="/vila7" className="luxury-link">
+  Have a look ...
+</Link>
+<br></br>
           <img
             src={foto9} 
             alt="Skyline Penthouse"
@@ -347,6 +364,10 @@ const Home = () => {
           </div>
         </div>
         <div className="property-card">
+        <Link to="/vila8" className="luxury-link">
+  Have a look ...
+</Link>
+<br></br>
           <img
            src={foto5} 
             alt="Ocean View Penthouse"
@@ -361,6 +382,10 @@ const Home = () => {
           </div>
         </div>
         <div className="property-card">
+        <Link to="/vila9" className="luxury-link">
+  Have a look ...
+</Link> 
+<br></br>
           <img
            src={foto6} 
             alt="Luxury Rooftop Penthouse"

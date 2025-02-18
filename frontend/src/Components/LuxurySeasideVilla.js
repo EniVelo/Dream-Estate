@@ -8,6 +8,7 @@ const LuxurySeasideVilla = () => {
     const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     
     fetch('http://localhost:5000/get-image-url')
       .then((response) => response.json())

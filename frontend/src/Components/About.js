@@ -6,25 +6,25 @@ const About = () => {
   return (
     <div className="about-us-container">
       <div className="about-us-content">
-        <h1 className="about-us-title">Rreth Dream Estate</h1>
+        <h1 className="about-us-title">About Dream Estate</h1>
         <p className="about-us-description">
-          Dream Estate është një platformë prestigjioze që ofron mundësi të shkëlqyera për të blerë, shitur dhe qarkulluar prona luksoze. 
-          Ne punojmë për të siguruar që çdo klient të ketë një përvojë të paharrueshme dhe të personalizuar për çdo transaksion.
+        Dream Estate is a prestigious platform that offers excellent opportunities for buying, selling, and managing luxury properties.
+        We work to ensure that every client has an unforgettable and personalized experience for every transaction.
         </p>
         <div className="about-us-mission">
-          <h2 className="about-us-subtitle">Misioni ynë</h2>
+          <h2 className="about-us-subtitle">Our mission</h2>
           <p className="about-us-description">
-            Misioni i Dream Estate është të krijojmë mundësi të qarta dhe të besueshme për të gjithë ata që kërkojnë të investojnë ose të gjejnë prona të shkëlqyera. 
-            Ne synojmë të sjellim transparencë, shërbim të shkëlqyer dhe një përvojë luksoze për përdoruesit tanë.
+          Dream Estate's mission is to create clear and reliable opportunities for everyone looking to invest or find exceptional properties.
+          We aim to bring transparency, excellent service, and a luxurious experience to our users.
           </p>
         </div>
         <div className="about-us-values">
-          <h2 className="about-us-subtitle">Vlerat tona</h2>
+          <h2 className="about-us-subtitle">Our values</h2>
           <ul className="values-list">
-            <li>Profesionalizëm</li>
-            <li>Siguri dhe transparencë</li>
-            <li>Shërbim personalizuar</li>
-            <li>Inovacion dhe teknologji të avancuar</li>
+            <li>Professionalism</li>
+            <li>Security and transparency</li>
+            <li>Personalized service</li>
+            <li>Innovation and advanced technology</li>
           </ul>
         </div>
       </div>

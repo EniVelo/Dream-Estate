@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './Vila3.css'; 
+import './Vila4.css'; 
 import foto3 from "../images/foto3.jpg";
 
-const Vila3 = () => {
+const Vila4 = () => {
     const [imageUrl, setImageUrl] = useState('');
 
     useEffect(() => {
@@ -16,25 +16,25 @@ const Vila3 = () => {
     }, []);
 
     return (
-        <div className="private-pool-villa">
+        <div className="penthouse-suite">
             <header className="header">
-                <h1>Private Pool Villa</h1>
-                <p>Your ultimate luxury escape</p>
+                <h1>Penthouse Suite</h1>
+                <p>Experience the pinnacle of luxury and elegance</p>
             </header>
 
-            <section className="villa-details">
-                <h2>About the Villa</h2>
+            <section className="suite-details">
+                <h2>About the Penthouse</h2>
                 <p>
-                    Welcome to the Private Pool Villa, a sanctuary of comfort and relaxation. Enjoy ultimate privacy, modern amenities, and exquisite luxury right by your own private pool.
+                    Welcome to the Penthouse Suite, a lavish retreat designed for those who appreciate sophistication, comfort, and breathtaking views. This suite offers top-tier amenities and unparalleled luxury.
                 </p>
                 <h3>Features:</h3>
                 <ul>
-                    <li>5 Spacious Bedrooms</li>
-                    <li>6 Modern Bathrooms</li>
-                    <li>Private Infinity Pool</li>
-                    <li>Fully Equipped Kitchen</li>
-                    <li>Outdoor Lounge Area</li>
-                    <li>Panoramic Ocean Views</li>
+                    <li>3 Luxurious Bedrooms</li>
+                    <li>4 Elegant Bathrooms</li>
+                    <li>Spacious Living and Dining Area</li>
+                    <li>Private Rooftop Terrace</li>
+                    <li>State-of-the-Art Kitchen</li>
+                    <li>Panoramic Cityscape Views</li>
                 </ul>
             </section>
 
@@ -42,47 +42,47 @@ const Vila3 = () => {
                 <h2>Gallery</h2>
                 <div className="image-grid">
                     <div className="image-container">
-                        <img
+                    <img
                             src={foto3} 
                             alt="Private Pool Villa"
                             className="property-image"
                         />
                         <div className="image-details">
-                            <h3>Villa Exterior</h3>
-                            <p>Relax and unwind in your private luxury oasis.</p>
+                            <h3>Suite Interior</h3>
+                            <p>Immerse yourself in ultimate luxury and modern elegance.</p>
                         </div>
                     </div>
                     <div className="image-container">
                         <img
-                            src="http://localhost:5000/images/slide1.jpg" 
-                            alt="private-pool"
+                           src="http://localhost:5000/images/slide1.jpg" 
+                            alt="rooftop-terrace"
                             className="top-image"
                         />
                         <div className="image-details">
-                            <h3>Infinity Pool</h3>
-                            <p>Swim in style with stunning views from your private infinity pool.</p>
+                            <h3>Rooftop Terrace</h3>
+                            <p>Enjoy panoramic views and unwind in your private outdoor space.</p>
+                        </div>
+                    </div>
+                    <div className="image-container">
+                        <img
+                            src="http://localhost:5000/images/slide2.jpg"  
+                            alt="luxury-living-room"
+                            className="top-image"
+                        />
+                        <div className="image-details">
+                            <h3>Living Room</h3>
+                            <p>Spacious, elegant, and designed for relaxation.</p>
                         </div>
                     </div>
                     <div className="image-container">
                         <img
                             src="http://localhost:5000/images/slide3.jpg" 
-                            alt="living-room"
-                            className="top-image"
-                        />
-                        <div className="image-details">
-                            <h3>Living Room</h3>
-                            <p>Modern and cozy, the perfect place to relax after a day of adventure.</p>
-                        </div>
-                    </div>
-                    <div className="image-container">
-                        <img
-                            src="http://localhost:5000/images/slide2.jpg" 
-                            alt="bedroom-view"
+                            alt="master-bedroom"
                             className="top-image"
                         />
                         <div className="image-details">
                             <h3>Master Bedroom</h3>
-                            <p>Sleep peacefully with luxury bedding and mesmerizing views.</p>
+                            <p>Wake up to stunning skyline views in your king-size bed.</p>
                         </div>
                     </div>
                 </div>
@@ -92,16 +92,16 @@ const Vila3 = () => {
                 <h2>Exclusive Amenities</h2>
                 <div className="amenities-list">
                     <div className="amenity">
-                        <h3>Private Chef</h3>
-                        <p>Enjoy gourmet meals prepared just for you, using the freshest local ingredients.</p>
+                        <h3>24/7 Concierge Service</h3>
+                        <p>Personalized assistance to cater to your every need.</p>
                     </div>
                     <div className="amenity">
-                        <h3>Private Poolside Bar</h3>
-                        <p>Refresh yourself with a wide variety of drinks at your own poolside bar.</p>
+                        <h3>Private Spa & Sauna</h3>
+                        <p>Indulge in relaxation and wellness within your own suite.</p>
                     </div>
                     <div className="amenity">
-                        <h3>Spa & Wellness</h3>
-                        <p>Indulge in a full spa treatment in the privacy of your villa.</p>
+                        <h3>Gourmet In-Suite Dining</h3>
+                        <p>Enjoy exquisite meals prepared by world-class chefs.</p>
                     </div>
                 </div>
             </section>
@@ -109,4 +109,4 @@ const Vila3 = () => {
     );
 };
 
-export default Vila3;
+export default Vila4;

@@ -13,7 +13,12 @@ import Update from "./Components/CRUD/Update";
 import LuxurySeasideVilla from './Components/LuxurySeasideVilla'; 
 import Vila2 from './Components/Vila2'; 
 import Vila3 from './Components/Vila3'; 
-
+import Vila4 from './Components/Vila4';
+import Vila5 from './Components/Vila5';
+import Vila6 from './Components/Vila6';
+import Vila7 from './Components/Vila7';
+import Vila8 from './Components/Vila8';
+import Vila9 from './Components/Vila9';
 
 
 const App = () => {
@@ -45,6 +50,12 @@ getData()
       <Route path="/luxury-seaside-villa" element={<LuxurySeasideVilla />} />
       <Route path="/vila2" element={<Vila2 />} />
       <Route path="/vila3" element={<Vila3 />} />
+      <Route path="/vila4" element={<Vila4 />} />
+      <Route path="/vila5" element={<Vila5 />} />
+      <Route path="/vila6" element={<Vila6 />} />
+      <Route path="/vila7" element={<Vila7 />} />
+      <Route path="/vila8" element={<Vila8 />} />
+      <Route path="/vila9" element={<Vila9 />} />
     </Routes>
    
    
