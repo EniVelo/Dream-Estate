@@ -1,6 +1,6 @@
 import mongoose from"mongoose";
 let itemSchema = new mongoose.Schema({
-name: {
+title: {
     type:String,
     required:true,
 },
@@ -11,6 +11,18 @@ description:{
 photo:{
     type:String,
     required:true,
+},
+price:{
+    type:Number,
+    required:true,
+},
+squareMeters: {
+    type: Number,
+    required: true,
+},
+bedroom: {
+    type: Number,
+    required: true,
 },
 });
 

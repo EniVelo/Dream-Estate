@@ -5,8 +5,9 @@
     color: #ecf0f1; 
     text-decoration: none;
   }
+ 
 
-  
+
   .contact-title {
     font-size: 48px;
     font-family: 'Georgia', serif;
@@ -86,12 +87,14 @@
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
   }
   
   .submit-btn:hover {
     background-color: #d4ac0d; 
   }
-  
+
+
 
   
   .contact-page-container .contact-form input:focus, .contact-page-container .contact-form textarea:focus {

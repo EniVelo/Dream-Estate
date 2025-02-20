@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Vila3.css'; 
-import foto3 from "../images/foto3.jpg";
+
 
 const Vila3 = () => {
     const [imageUrl, setImageUrl] = useState('');
@@ -42,10 +42,10 @@ const Vila3 = () => {
                 <h2>Gallery</h2>
                 <div className="image-grid">
                     <div className="image-container">
-                        <img
-                            src={foto3} 
-                            alt="Private Pool Villa"
-                            className="property-image"
+                    <img
+                            src="http://localhost:5000/images/slide4.jpg" 
+                            alt="private-pool"
+                            className="top-image"
                         />
                         <div className="image-details">
                             <h3>Villa Exterior</h3>
@@ -54,7 +54,7 @@ const Vila3 = () => {
                     </div>
                     <div className="image-container">
                         <img
-                            src="http://localhost:5000/images/slide1.jpg" 
+                            src="http://localhost:5000/images/slide7.jpg" 
                             alt="private-pool"
                             className="top-image"
                         />

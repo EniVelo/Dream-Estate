@@ -6,7 +6,8 @@ import routeContact from "./routes/routeContact.js";
 import routeItem from "./routes/routeItem.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+import multer from "multer";
+import routeSearch from "./routes/routeSearch.js";
 
 
 
@@ -45,10 +46,13 @@ mongoose.connect('mongodb+srv://eniveloeni:enivelo1771!@cluster0.tv9x7.mongodb.n
   .catch((err) => console.log("Error: " + err));
 
 // Perdorimi i rrugeve te tjera
-app.use(routeContact);
-app.use(routeItem);
+app.use("/api/contact", routeContact);
+app.use("/api/items", routeItem);
+app.use("/api/search", routeSearch);
 
-//  endpoint i thjeshte testimi
+
+
+// endpoint testimi
 app.use("/", (req, res) => {
   res.send("Hello");
 });
@@ -59,4 +63,6 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+
+app.use(express.urlencoded({ extended: true }));
 

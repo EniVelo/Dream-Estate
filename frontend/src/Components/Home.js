@@ -19,13 +19,14 @@ import { Link } from 'react-router-dom';
     
 const Home = () => {
   // Perdorimi i useState per te ruajtur te dhenat
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
 
   // Funksioni per te marre te dhena nga backend
   const getData = async () => {
     try {
-      const response = await Axios.get("http://localhost:5000/getData"); 
+      const response = await Axios.get("http://localhost:5000/readItems"); 
       setData(response.data); // Ruani te dhenat ne gjendje
+      console.log(response.data);
     } catch (error) {
       console.error("Error fetching data:", error); 
     }
@@ -34,33 +35,57 @@ const Home = () => {
   // Perdoret useEffect per te thirrur getData nje here pas ngarkimit të komponentit
   useEffect(() => {
     getData();
-  }, []); // Perseritet nje here kur komponenti ngarkohet
+  }, []); 
 
   
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [searchType, setSearchType] = useState('rent');
-  const [budget, setBudget] = useState('');
+  //const [searchTerm, setSearchTerm] = useState('');
+  // const [searchType, setSearchType] = useState('rent');
+  // const [budget, setBudget] = useState('');
 
-  // Example properties array
-  const properties = [
-  ];
-
-  const handleSearch = () => {
+  //const handleSearch = (e) => {
+    //e.preventDefault();
     // Filter properties based on search term, type, and budget
-    const filteredProperties = properties.filter(property => {
-      const matchesSearchTerm = property.title.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesType = property.type.toLowerCase() === searchType.toLowerCase();
-      const matchesBudget = budget ? property.price <= budget : true;
-
-      return matchesSearchTerm && matchesType && matchesBudget;
-    });
+    //const filteredProperties = data.filter(property => 
+     // property.title === searchTerm
+      //const matchesType = property.type.toLowerCase() === searchType.toLowerCase();
+      // return matchesSearchTerm && matchesType ;
+    //);
 
     // Console log to check filtered results
-    console.log('Filtered Properties:', filteredProperties);
-    return filteredProperties;
-  };
+    //console.log('Filtered Properties:', filteredProperties);
+    //return filteredProperties;
+  //};
+  const [searchTerm, setSearchTerm] = useState('');
+  const [properties, setProperties] = useState([]);
+  const [filteredProperties, setFilteredProperties] = useState([]);
 
+  useEffect(() => {
+    // Kur të ndryshojnë pronat, filtro ato
+    if (searchTerm) {
+      const filtered = properties.filter(property =>
+        property.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredProperties(filtered);
+    } else {
+      setFilteredProperties(properties);
+    }
+  }, [searchTerm, properties]); // Përsëri ekzekutohet kur ndryshojnë searchTerm ose properties
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch(`http://localhost:5000/search?search=${searchTerm}`);
+      const data = await response.json();
+      
+      // Vendos të dhënat që kthehen nga backend në state
+      setProperties(data); 
+    } catch (error) {
+      console.error("Error searching properties:", error);
+    }
+  };
+  
   
       return (
         <div className="app">
@@ -106,7 +131,7 @@ const Home = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
     />
 
-    <select 
+ {/*   <select 
     className="search-type"
     value={searchType}
     onChange={(e) => setSearchType(e.target.value)} >
@@ -120,10 +145,25 @@ const Home = () => {
       className="search-budget"
       value={budget}
           onChange={(e) => setBudget(e.target.value)}
-    />
+    /> */}
     
     <button className="search-btn" onClick={handleSearch}>Search</button>
     </form>
+     {/* Shfaq rezultatet e kerkimit */}
+     <div className="search-results">
+  {filteredProperties.length > 0 ? (
+    filteredProperties.map((property) => (
+      <div key={property._id}>
+        <h3>{property.title}</h3>
+        <p>{property.description}</p>
+        <p>{property.price}</p>
+      </div>
+    ))
+  ) : (
+    <p>No results found</p>  
+  )}
+</div>
+
   </div>
 </section>
 
